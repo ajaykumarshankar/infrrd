@@ -1,0 +1,55 @@
+@function rem-calc($sizes: 0) {
+    $remSize: null;
+    @each $size in $sizes {
+        $rem: str-replace(inspect($size/16), 'px', '');
+
+        @if $rem != '0' {
+            $rem: $rem + rem
+        }
+
+        @if $remSize == null {
+            $remSize : $rem;
+        } @else {
+            $remSize : $remSize + ' ' + $rem;
+        }
+    }
+    @return $remSize;
+}
+
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace +
+        str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+@mixin border-radius($tl, $tr, $br, $bl) {
+    border-top-left-radius: $tl;
+    border-top-right-radius: $tr;
+    border-bottom-right-radius: $br;
+    border-bottom-left-radius: $bl;
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    &::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: $background-color;
+    }
+
+    & {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  }

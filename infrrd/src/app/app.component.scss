@@ -1,0 +1,12 @@
+@import '_mixins', '_variables';
+
+.main-container-wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: row;
+    .main-container {
+        width: calc(100vw - rem-calc(266px));
+    }
+   
+}
