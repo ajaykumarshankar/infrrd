@@ -1,0 +1,22 @@
+@import '_mixins', '_variables';
+
+.card-footer {
+    .row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;    
+        padding: rem-calc(10px 0);  
+        .icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+                font-family: $base-font;
+                font-size: 14px;
+                font-weight: 600;
+                color: $primary-black;
+                margin-left: rem-calc(5px);
+            }
+        }
+    }
+}

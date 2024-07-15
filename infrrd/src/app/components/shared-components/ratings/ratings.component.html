@@ -1,0 +1,13 @@
+
+<div class="rating-stars">
+    <span>{{ratings}} Ratings</span>
+    <div class="rating-group" #rating>
+        <i class="fa fa-star" [class.no-rating]="ratings == 0" [class.full]="ratings > 0" [class.fa-star-half]="ratings == 0.5"  aria-hidden="true"></i>
+        <i class="fa fa-star" [class.full]="ratings > 1" [class.fa-star-half]="ratings == 1.5" aria-hidden="true"></i>
+        <i class="fa fa-star" [class.full]="ratings > 2" [class.fa-star-half]="ratings == 2.5" aria-hidden="true"></i>
+        <i class="fa fa-star" [class.full]="ratings > 3" [class.fa-star-half]="ratings == 3.5" aria-hidden="true"></i>
+        <i class="fa fa-star" [class.full]="ratings > 4" [class.fa-star-half]="ratings == 4.5" aria-hidden="true"></i>
+    </div>
+</div>
+
+

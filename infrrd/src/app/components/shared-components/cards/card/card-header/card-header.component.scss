@@ -1,0 +1,31 @@
+@import '_mixins', '_variables';
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem-calc(0 15px);
+    .profile-pic {
+        flex: 1;
+    }
+    .profile-details {    
+        padding: rem-calc(0 30px);
+        h3 {
+            font-family: $base-font;
+            color: $primary-black;
+            font-weight: 800;
+            font-size: 17px;
+            margin-bottom: rem-calc(15px);
+        }
+        p {
+            font-family: $base-font;
+            color: $dark-gray;
+            font-weight: 500; 
+            font-size: 17px;
+            letter-spacing: -.5px;
+        }
+    }
+    .profile-share{
+
+    }
+}

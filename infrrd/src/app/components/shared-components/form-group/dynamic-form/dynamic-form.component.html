@@ -1,0 +1,27 @@
+<div class="dynamic-form-container">
+    <ng-container *ngFor="let field of config">
+       <!-- Select --> 
+       <ng-container *ngIf="field.fieldType === Field_Types.SELECT">
+        <div class="select-container">
+            <div class="select-box">
+                <app-select  appCloseOutsideClick 
+                    [selectId]="field.id"
+                    [width]="field.width"
+                    [height]="field.height"
+                    [list]="field.list"
+                    [label]="field?.label"
+                    [top]="field?.top"
+                    [initValue]="field.initValue"
+                    (selectOptionEvent)="onSelect($event)"
+                    (closeOutsideClick)="onClose()"
+                ></app-select>            
+            </div>   
+        </div>
+       </ng-container>   
+
+         
+       <!-- Inputs --> 
+       <!-- Radios --> 
+       <!-- Checkboxes --> 
+    </ng-container>
+</div>

@@ -1,0 +1,12 @@
+@import '_mixins', '_variables';
+
+.notification-container {
+    div {
+        font-family: $base-font;
+        @include border-radius(4px, 4px, 4px, 4px);
+        background-color: $primary-red;
+        color: $white;
+        font-weight: 600;
+        padding: rem-calc(2px 8px);
+    }
+}

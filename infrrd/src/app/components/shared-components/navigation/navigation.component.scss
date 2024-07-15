@@ -1,0 +1,36 @@
+
+@import '_mixins', '_variables';
+
+.navigaton-container {
+    width: initial;
+        ul {
+            font-family: $base-font;
+            list-style: none;
+            padding: 0;
+            margin-left: rem-calc(30px);
+            li {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin: rem-calc(15px 0);
+                a {
+                    font-family: $base-font;
+                    color: $primary-green;
+                    font-weight: 700;
+                    line-height: normal;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    text-decoration: none;
+                    transition: transform 0.2s ease;
+                    img {
+                        margin-right: rem-calc(10px);
+                    }
+                    &:hover {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+    
+}

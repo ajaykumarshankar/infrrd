@@ -1,0 +1,26 @@
+<div class="select-box-container">
+      <div class="custom-select" [style.width.px]="width">
+        <select [id]="generateDynamicId(selectId)">
+          <option value="defaultSelect" selected>{{initValue}}</option>
+          <option  *ngFor="let item of list; let i = index;" [value]="list[i].value">
+            {{item.displayValue}}
+         </option>     
+        </select>
+
+         <div class="select-dropdown" style="width:100%;" (click)="onSelectClick($event)">
+            <span class="label" *ngIf="label">{{label}}</span>
+            <div>
+                <span class="initial-value">{{selectedValue}}</span>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>           
+          </div>
+          <ul [style.top.px]="getTopPostion()">
+            <ng-container  *ngFor="let item of list">
+                <li (click)="onSelectOption($event, item)">
+                    <a href="javascript:;" >{{item.displayValue}}</a></li>
+            </ng-container>
+          </ul>
+      </div>
+  
+</div>
+<div class="select-overlay" *ngIf="isSelectOpened" (click)="onModalClick()"></div>

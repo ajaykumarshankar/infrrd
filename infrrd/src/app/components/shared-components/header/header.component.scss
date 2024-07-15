@@ -1,0 +1,18 @@
+@import '_mixins', '_variables';
+
+.header {
+    background-color: $white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: rem-calc(82px);
+    position: relative;
+    z-index: 1;
+
+    -webkit-box-shadow: -5px 11px 5px -5px rgba(235,235,235,1);
+    -moz-box-shadow: -5px 11px 5px -5px rgba(235,235,235,1);
+    box-shadow: -5px 11px 5px -5px rgba(235,235,235,1);
+    .choose-team-select {
+        height: rem-calc(60px);
+    }
+}

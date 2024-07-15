@@ -1,0 +1,17 @@
+@import '_mixins', '_variables';
+
+.icon-circle {
+    width: rem-calc(40px);
+    height: rem-calc(40px);
+    border-radius: 50%;
+    -webkit-box-shadow: -0.5px 0 10.5px 1.5px #dddddd;
+    -moz-box-shadow: -0.5px 0 10.5px 1.5px #dddddd;
+    box-shadow: -0.5px 0 10.5px 1.5px #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: rem-calc(25px);
+         height: rem-calc(25px);
+    }
+}

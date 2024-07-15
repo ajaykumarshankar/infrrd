@@ -1,0 +1,29 @@
+@import '_mixins', '_variables';
+
+.rating-stars {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   padding: rem-calc(25px);
+   span {
+      font-family: $base-font;
+      font-size: rem-calc(14px);
+      font-weight: 500;
+      color: $dark-primary-gray;
+      margin-right: rem-calc(20px);
+   }
+   i {
+      margin-right: rem-calc(8px);
+      color: $lite-gray-primary;
+      &.full {
+        color: $primary-rating-selected;
+      }
+      &.fa-star-half {
+        color: $primary-rating-selected;
+      }
+      &.no-rating {
+        color: $lite-gray-primary;
+      }
+  
+   }
+}

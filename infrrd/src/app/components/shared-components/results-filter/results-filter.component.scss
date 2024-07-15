@@ -1,0 +1,17 @@
+@import '_mixins', '_variables';
+
+.results-container {
+    font-family: $base-font;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem-calc(15px 10px);
+    margin-top: rem-calc(20px);
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

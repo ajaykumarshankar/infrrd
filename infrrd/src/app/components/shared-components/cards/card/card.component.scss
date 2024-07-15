@@ -1,0 +1,11 @@
+@import '_mixins', '_variables';
+
+.card-container {
+    max-width: rem-calc(400px);
+    min-width: rem-calc(400px);
+    @include border-radius(5px, 5px, 5px,5px);
+    border: solid 1px $lite-gray-secondary;
+    box-shadow: 0 0 1px $primary-gray;
+    background-color: $white;
+    margin: rem-calc(5px);
+}

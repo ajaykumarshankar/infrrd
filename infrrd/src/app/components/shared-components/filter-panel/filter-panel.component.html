@@ -1,0 +1,23 @@
+<div class="filter-panel-container" [class.open]="isFilterOpen">
+  <app-dynamic-form
+    [config]="filterFormConfig"
+    (selectOptionEvent)="onSelect($event)"
+  ></app-dynamic-form>
+
+  <div class="buttons">
+    <app-button-groups>
+      <app-button
+        [type]="'secondary'"
+        [label]="'Clear'"
+        [width]="150"        
+        (buttonEvent)="onClick($event)"
+      ></app-button>
+      <app-button
+        [type]="'primary'"
+        [label]="'Submit'"
+        [width]="150"
+        (buttonEvent)="onClick($event)"
+      ></app-button>
+    </app-button-groups>
+  </div>
+</div>

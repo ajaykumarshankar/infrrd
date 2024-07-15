@@ -1,0 +1,11 @@
+@import '_mixins', '_variables';
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    .main-content {
+        padding-left: rem-calc(5px);
+        flex-grow: 1;
+        min-height: rem-calc(700px);
+    }
+}

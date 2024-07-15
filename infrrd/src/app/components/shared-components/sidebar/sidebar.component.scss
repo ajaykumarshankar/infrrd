@@ -1,0 +1,16 @@
+@import '_mixins', '_variables';
+
+
+.side-bar {
+    width: rem-calc(266px);
+    border-right: solid 1px $lite-gray-primary;
+    background-color: $white;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

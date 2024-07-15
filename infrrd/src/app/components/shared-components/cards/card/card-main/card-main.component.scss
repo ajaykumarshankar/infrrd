@@ -1,0 +1,55 @@
+
+@import '_mixins', '_variables';
+
+.card-main {
+    .employee-details {
+        .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;            
+            border-bottom: solid 1px $lite-gray-titenery;
+            &.border {              
+                > div:first-child {
+                    position: relative;
+                    &:after {
+                        content: '';
+                        width: 1px;
+                        background-color: $lite-gray-titenery;
+                        position: absolute;
+                        height: 63px;
+                        right: rem-calc(-20px);
+                        top: -1px;
+                        transform: rotate(18deg);
+                    }
+                }
+            }
+            &:first-child {
+                border-top: solid 1px $lite-gray-titenery;
+            }
+            &.text-left {
+                justify-content: flex-start;   
+            }
+            &.single-line {
+                padding-left: rem-calc(5px);
+                padding-right: rem-calc(5px);
+            }
+            > div {
+                padding: rem-calc(20px 0);
+                text-align: center;               
+                span {
+                    font-family: $base-font;
+                    color: $dark-primary-gray;
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-right: rem-calc(3px);
+                }
+                strong {
+                    font-family: $base-font;
+                    color: $primary-black;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
